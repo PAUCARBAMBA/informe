@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Técnico de Fotogrametría</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #2b6cb0;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--light-bg);
+        }
+
+        .document {
+            max-width: 1100px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .company-seal {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .text-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .coordinates-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        .coordinates-table th,
+        .coordinates-table td {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .coordinates-table th {
+            background: var(--light-bg);
+            font-weight: 600;
+        }
+
+        .result-card {
+            background: var(--light-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-title {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-link {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .result-link:hover {
+            background: var(--secondary-color);
+        }
+
+        .signature-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .signature-box {
+            text-align: center;
+            width: 250px;
+        }
+
+        .signature-line {
+            width: 100%;
+            height: 2px;
+            background: var(--text-color);
+            margin: 1rem 0;
+        }
+
+        .signature-name {
+            font-weight: 600;
+        }
+
+        .signature-title {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .date {
+            text-align: right;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .equipment-list {
+            list-style: none;
+        }
+
+        .equipment-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .equipment-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <header class="header">
+            <img src="/api/placeholder/120/120" alt="Sello de la empresa" class="company-seal">
+            <div class="header-content">
+                <h1 class="title">Informe Técnico de Levantamiento Fotogramétrico</h1>
+                <p class="subtitle">Realizado con DJI Mavic 3 Pro Enterprise y Sistema PPK</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2 class="section-title">1. Introducción</h2>
+                <div class="text-content">
+                    <p>El presente informe detalla el levantamiento fotogramétrico realizado mediante tecnología drone y sistema PPK, para la generación de productos cartográficos de alta precisión. El proyecto se realizó siguiendo estándares internacionales de calidad y precisión en la captura y procesamiento de datos geoespaciales.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">2. Objetivos</h2>
+                <div class="text-content">
+                    <p>2.1 Objetivo General</p>
+                    <p>Realizar el levantamiento fotogramétrico del área de estudio mediante tecnología drone y sistema PPK para la generación de productos cartográficos de alta precisión.</p>
+                    <br>
+                    <p>2.2 Objetivos Específicos</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Generar un ortomosaico georreferenciado del área de estudio</li>
+                        <li>Curvas de Nivel cada 0.5 metros</li>
+                        <li>Crear un modelo digital de superficie de alta precisión</li>
+                        <li>Crea un modelo Digital de Terreno de alta precision</li>
+                        <li>Producir documentación técnica del levantamiento</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">3. Área de Estudio</h2>
+                <div class="text-content">
+                    <p>El área de estudio se encuentra ubicada en [Ubicación], abarcando una superficie total de [X] hectáreas. La zona presenta una topografía [descripción del terreno] con elevaciones que varían entre los [X] y [Y] metros sobre el nivel del mar.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">4. Coordenadas Base Utilizadas - WGS84/19 SUR - EPSG:32718</h2>
+                <table class="coordinates-table">
+                    <thead>
+                        <tr>
+                            <th>Punto</th>
+                            <th>Norte (m)</th>
+                            <th>Este (m)</th>
+                            <th>Elevación EGM2008(m)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BASE-01</td>
+                            <td>8528844.263</td>
+                            <td>803622.449</td>
+                            <td>2901.265</td>
+                            <td>0.015</td>
+                        </tr>
+                        <tr>
+                            <td>BASE-02</td>
+                            <td>8528782.323</td>
+                            <td>803518.641</td>
+                            <td>2921.230</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">5. Metodología</h2>
+                <div class="text-content">
+                    <p>El levantamiento se realizó mediante la metodología PPK (Post-Processed Kinematic), siguiendo las siguientes etapas:</p>
+                    <br>
+                    <ol style="margin-left: 1.5rem;">
+                        <li>Planificación del vuelo y establecimiento de puntos de control de validacion</li>
+                        <li>Captura de datos con drone y receptores GNSS</li>
+                        <li>Post-procesamiento de datos GNSS</li>
+                        <li>Procesamiento fotogramétrico</li>
+                        <li>Control de calidad y validación de resultados</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">6. Equipos Utilizados</h2>
+                <div class="text-content">
+                    <ul class="equipment-list">
+                        <li>Drone: DJI Mavic 3 Pro Enterprise</li>
+                        <li>Receptores GNSS: 2 unidades Emlid RS3 y 2 unidades South G7</li>
+                        <li>Software de procesamiento Fotogrametrico: Pix4D Enterprise Version 4.5.6</li>
+                        <li>Software de procesamiento Geodesico: Trimble Business Center</li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">7. Resultados</h2>
+                <div class="result-card">
+                    <h3 class="result-title">Visualización de Resultados</h3>
+                    <a href="https://paucarbamba.github.io/MDS/" class="result-link" target="_blank">Ver Nube de Puntos</a>
+                    <a href="https://paucarbamba.github.io/PANORAMICO/" class="result-link" target="_blank">Ver Tour Virtual 360°</a>
+                    <a href="https://drive.google.com/drive/folders/1hGyI2cuDzlfDy6EVT5ivgcqvB-RzbgpF?usp=drive_link" class="result-link" target="_blank">Descargar Archivos Completos</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">8. Conclusiones</h2>
+                <div class="text-content">
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Se alcanzó una precisión RMS = 0.018 m</li>
+                        <li>El GSD obtenido fue de 3.10 cm/píxel, cumpliendo con los requerimientos del proyecto</li>
+                        <li>Se Genero Productos Altimetricos como Modelo de Elevacion Digital, Superficie, Nube de Puntos</li>
+                        <li>Se Genero Curvas de Nivel 0.5 m formato dwg</li>
+                        <li>Se Genero Ortofoto</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="signature-section">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p class="signature-name">Percy Elbis Colque Caillahua</p>
+                    <p class="signature-title">Ingeniero Topografo y Agrimensor</p>
+                    <p class="signature-title">CIP:263306</p>
+                </div>
+            </div>
+
+            <div class="date">
+                <p>Fecha: 27 de Enero, 2025</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
